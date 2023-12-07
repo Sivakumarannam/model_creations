@@ -14,3 +14,9 @@ class AccessRecord(models.Model):
     name=models.ForeignKey(Webpage,on_delete=models.CASCADE)
     date=models.DateField()
     author=models.CharField(max_length=100)
+
+class Players(models.Model):
+    author=models.ForeignKey(Webpage,on_delete=models.CASCADE)
+    player=models.CharField(max_length=100,unique=True)
+
+
